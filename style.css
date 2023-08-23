@@ -1,0 +1,59 @@
+.animations {
+    display: inline-block;
+    width: 700px;
+    height: auto;
+    overflow: hidden;
+}
+
+#animation-frame {
+    width: 100%;
+    height: auto;
+    animation: playanimation 0.5s steps() infinite;
+}
+
+.catOne{
+    width: 100%;
+    height: 100%;
+}
+
+.health-bar {
+    width: 100%;
+    height: 20px;
+    background-color: blueviolet;
+    margin-top: 10px;
+}
+
+.health.fill{
+    height: 100%;
+    width: 100%;
+    background-color:antiquewhite;
+    transition: width 0.2s ease-in-out;
+}
+
+.happiness-bar{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(224, 239, 11);
+    margin-top: 10px;
+}
+
+.happy.fill {
+    height: 100%;
+    width: 100%;
+    background-color:antiquewhite;
+    transition: width 0.2s ease-in-out;
+}
+
+.cleanliness-bar {width: 100%;
+    height: 20px;
+    background-color: rgb(80, 59, 28);
+    margin-top: 10px;
+}
+
+.clean.fill{
+    height: 100%;
+    width: 100%;
+    background-color:antiquewhite;
+    transition: width 0.2s ease-in-out;
+}
+
