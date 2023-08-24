@@ -17,10 +17,11 @@ let hungerDecreaseTimer;
 let hungerUpdateTimer;
 
 if (petType === "Dog") {
-        document.getElementById('Pet').src = './Doggos/doggy2.png';
+        document.getElementById('Pet').src = './Doggos/Doggo1.png';
+        document.getElementById('Pet').classList.add('dog');
     }else {document.getElementById('Pet').src = "./Cats/Stretching.png";
-    
-    }
+             document.getElementById('Pet').classList.add('cat');
+}
     
 
 // function to decrease health over time 

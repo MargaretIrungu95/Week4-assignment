@@ -2,10 +2,17 @@
     --pixel-size:6;
 }
 
+/* .pet-C {
+    width: calc(32px * var(--pixel-size));
+    height: calc(32px * var(--pixel-size));
+    overflow: hidden;
+} */
+
 .pet {
     width: calc(32px * var(--pixel-size));
     height: calc(32px * var(--pixel-size));
     overflow: hidden;
+    background-color: aqua;
 }
 
 .cat {
@@ -13,6 +20,10 @@
     width: calc(428px * var(--pixel-size));
 }
 
+.dog {
+    animation: moveSpritesheet 10s steps(4) infinite;
+    width: calc(128px * var(--pixel-size));
+}
 
 @keyframes moveSpritesheet {
     from {
@@ -27,10 +38,7 @@
    image-rendering: pixelated;
 }
 
-.dog {
-    animation: moveSpritesheet 8s steps(13) infinite;
-    width: calc(428px * var(--pixel-size));
-}
+
 
 .hunger-bar {
     width: 100%;
