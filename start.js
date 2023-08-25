@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(petName.trim() === '') {
             alert('Please enter a name for your pet.');
         }else {
-            window.location.href = `index.html?pet=${selectedPet}&name=${petName}`
+            window.location.href = `indexB.html?pet=${selectedPet}&name=${petName}`
         }
 
     });
