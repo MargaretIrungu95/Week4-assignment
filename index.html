@@ -8,37 +8,51 @@
 
 </head>
 <body>
-<div class="heading"><h1>Cyber Pet Project!</h1>
-<h2>By Meg, Margaret & Jett</h2></div>
+
+    <div class="heading"><h1>Cyber Pet Project!</h1>
+        <h2>By Meg, Margaret & Jett</h2>
+        <h3 id="petStateUpdate"> HAVE FUN!</h3>
+        
+    </div>
+
     <div class='container'>
         <div class = 'cat'>
             <img src="" alt="">
         </div>
     </div>
-<div class="pet">
+
+    <div class="pet">
     <img id="Pet"   class= "pixelart"  src="./Doggos/Doggo1.png" alt="Doggo">
-</div>
-<!-- <div class="pet">
-    <img id="Pet" class="cat pixelart" src="./Cats/Stretching.png" alt="cat">
-
-</div> -->
-
-
-    <div class="controls">
-        <button id="feedButton">Feed</button>
-        <button id="playButton">Play</button>
-        <button id="brushButton">Brush</button>
     </div>
-    <div class="stats">
-        <h2>Needs:</h2>
-        <p id="hunger">Hunger:</p>
-        <div class="hunger-bar" id="hunger-fill"></div>  
-        <p id="happiness">Happiness:</p>
-        <div class="happiness-bar" id="happy-fill"></div>  
-        <p id="cleanliness">Cleanliness:</p>
-        <div class="cleanliness-bar" id="clean-fill"></div>  
-     
-            
+
+    <div>
+        <button onclick="move()" id="startBtn">CLICK TO START</button>
+    </div>
+    <br>
+    <div class="buttons">
+        <button id="feedBtn">FEED</button>
+        <button id="playBtn">PLAY</button>
+        <button id="brushBtn">BRUSH</button>
+    </div>
+
+    <div class="healthBars">
+        <p>Pet Health:</p>
+        <progress id="health" value="100" max="100"></progress>
+        <br>
+        <p>Pet Happiness:</p>
+        <progress id="happiness" value="100" max="100"></progress>
+        <br>
+        <p>Pet Energy:</p>
+        <progress id="energy" value="100" max="100"></progress>
+        <br>
+        <p>Pet Cleanliness:</p>
+        <progress id="cleanliness" value="100" max="100"></progress>
+    </div>
+
+    <br>
+
+    <div>
+        <button id="resetBtn">RESET GAME</button>
     </div>
 
 
