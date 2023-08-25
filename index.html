@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CYBER PET PROJECT</title>
+    <title>CYBER PET</title>
     <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 
-    <div class="heading"><h1>Cyber Pet Project!</h1>
-        <h2>By Meg, Margaret & Jett</h2>
+    <div>
         <h3 id="petStateUpdate"> HAVE FUN!</h3>
-        
     </div>
 
     <div class='container'>
@@ -25,14 +23,14 @@
     <img id="Pet"   class= "pixelart"  src="./Doggos/Doggo1.png" alt="Doggo">
     </div>
 
-    <div>
+    <div class ="startBtnDiv">
         <button onclick="move()" id="startBtn">CLICK TO START</button>
     </div>
     <br>
     <div class="buttons">
-        <button id="feedBtn">FEED</button>
-        <button id="playBtn">PLAY</button>
-        <button id="brushBtn">BRUSH</button>
+        <button class="feedButton" id="feedBtn">FEED</button>
+        <button class="playButton" id="playBtn">PLAY</button>
+        <button class="brushButton" id="brushBtn">BRUSH</button>
     </div>
 
     <div class="healthBars">
@@ -51,7 +49,7 @@
 
     <br>
 
-    <div>
+    <div class="resetBtnDiv">
         <button id="resetBtn">RESET GAME</button>
     </div>
 

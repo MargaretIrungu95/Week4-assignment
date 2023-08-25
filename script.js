@@ -14,14 +14,47 @@ const petStateUpdate = document.getElementById("petStateUpdate");
 const petSelect = new URLSearchParams(window.location.search);
 const petName = petSelect.get('name');
 const petType = petSelect.get('pet');
+
+// start page
+function goToStartPage() {
+    window.location.href = "http://127.0.0.1:5500/start.html";
+}
 // Make bars start to decrease as soon as game is started and can be controlled by pressing the buttons.
 let barsDecrease;
 startBtn.addEventListener('click', () => {
     barsDecrease = setInterval(() => {
+        // health bar update
         health.value -= 5;
+        if(health.value == 30){
+            petStateUpdate.innerHTML = 'Your pet isnt feeling well! Feed and play with your pet to replenish them!';
+        }
+        if(health.value == 0) {
+            petStateUpdate.innerHTML = 'Your pet needs to go to the vet!. Please try again!!';
+        };
+        // happiness bar update
         happiness.value -= 5;
+        if(happiness.value == 30){
+            petStateUpdate.innerHTML = 'Your pet is lonely :( Give them some attention!';
+        }
+        if(happiness.value == 0) {
+            petStateUpdate.innerHTML = 'Your pet is not happy at all! Show them some love!';
+        };
+        // energy bar update
         energy.value -= 5;
+        if(energy.value == 30){
+            petStateUpdate.innerHTML = 'Your pet needs more energy! Please feed and play with them!';
+        }
+        if(energy.value == 0) {
+            petStateUpdate.innerHTML = 'YOUR PET HAS NO MORE ENERGY :(';
+        };
+        // cleanliness bar update
         cleanliness.value -= 5;
+        if(cleanliness.value == 30){
+            petStateUpdate.innerHTML = 'Your pet is really dirty! Please brush them!';
+        }
+        if(cleanliness.value == 0) {
+            petStateUpdate.innerHTML = 'Your pet is in need of serious grooming!';
+        };
     }, 500); 
 })
 
@@ -46,26 +79,42 @@ brushBtn.addEventListener('click', () => {
 });
 // For the animations
 if (petType === "Dog") {
-        document.getElementById('Pet').src = './Doggos/Doggo1.png';
-        document.getElementById('Pet').classList.add('dog');
-    }else {document.getElementById('Pet').src = "./Cats/Stretching.png";
-             document.getElementById('Pet').classList.add('cat');
-            //  document.querySelector('.pet').style.marginLeft = '-60px';
+    document.getElementById('Pet').src = './Doggos/Doggo1.png';
+    document.getElementById('Pet').classList.add('dog');
+}
+else {
+    document.getElementById('Pet').src = "./Cats/Stretching.png";
+    document.getElementById('Pet').classList.add('cat');
+    document.querySelector('.pet').style.paddingRight = '60px';
 };
 
-// function to udate UI and check if pet needs feeding 
-function startHungerUpdate() {
-    hungerUpdateTimer = setInterval(() => {
-        updateUI();
-        if (hunger <= 30) {
-            alert('${petName} is hungery. Please feed them!');
-        }
-    }, 1000);
-}
+// // function to udate UI and check if pet needs feeding 
+// function startHungerUpdate() {
+//     hungerUpdateTimer = setInterval(() => {
+//         updateUI();
+//         if (hunger <= 30) {
+//             alert('${petName} is hungery. Please feed them!');
+//         }
+//     }, 1000);
+// }
 
-function updateUI() {
-    hungerDisplay.textContent = 'Hunger: ${hunger}%';
-    happinessDisplay.textContent = 'Happiness: ${happiness}%';
-    cleanlinessDisplay.textContent = 'Cleanliness: ${cleanliness}%';
-}
+// Reset button
+
+
+resetBtn.addEventListener('click', () => {
+    // Reset the bars to their initial values
+    health.value = 100;
+    happiness.value = 100;
+    energy.value = 100;
+    cleanliness.value = 100;
+
+    // Clear the petStateUpdate message
+    petStateUpdate.innerHTML = "";
+     // Clear any running intervals (stop the bars from decreasing)
+     clearInterval(barsDecrease);
+
+     // Navigate back to the start page
+     goToStartPage();
+
+});
 

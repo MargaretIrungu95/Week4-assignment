@@ -1,89 +1,344 @@
-* {
-    font-family: 'VT323', monospace;
-    font-size: 50px;
+/* Button CCS Credit, Number 56: https://getcssscan.com/css-buttons-examples    */
+/* Font Family from Google Fonts: https://fonts.google.com/specimen/VT323    */
+
+   * {
+        font-family: 'VT323', monospace;
+        font-size: 50px;
+    }
+
+.heading {
+    display: table;
+    margin-left: 0;
+    margin-right: 0;
+
 }
 
-:root {
-    --pixel-size: 6;
-}
+    :root {
+        --pixel-size: 6;
+    }
 
-.pet {
-    width: calc(32px * var(--pixel-size));
-    height: calc(32px * var(--pixel-size));
-    overflow: hidden;
-    background-color: none;
-    display: block;
+    .pet {
+        width: calc(32px * var(--pixel-size));
+        height: calc(32px * var(--pixel-size));
+        overflow: hidden;
+        background-color: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px;
+        border-style: solid;
+        background-image: url("./Backgrounds/hill.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+.buttons {
+
+    display: table;
     margin-left: auto;
     margin-right: auto;
-    border: 2px;
-    border-style: solid;
 }
 
-.cat {
-    animation: moveSpritesheet 7s steps(13) infinite;
-    width: calc(628px * var(--pixel-size));
+.startBtnDiv {
 
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.dog {
-    animation: moveSpritesheet 10s steps(4) infinite;
-    width: calc(128px * var(--pixel-size));
+.resetBtnDiv {
+
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 55px;
 }
 
-@keyframes moveSpritesheet {
-    from {
-        transform: translate3d(opx, 0, 0);
+#startBtn    {
+        align-items: center;
+        background-color: #fee6e3;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-family: 'VT323', monospace;
+        font-size: 40px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        margin-top: 35px;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        }
+
+#startBtn:after {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+}
+
+#startBtn:hover:after {
+    transform: translate(0, 0);
+}
+
+#startBtn:active {
+    background-color: #ffdeda;
+    outline: 0;
+}
+
+#startBtn:hover {
+
+    outline: 0;
+}
+
+    .cat {
+        animation: moveSpritesheet 7s steps(13) infinite;
+        width: calc(628px * var(--pixel-size));
+
     }
 
-    to {
-        transform: translate3d(-100%, 0, 0);
+    .dog {
+        animation: moveSpritesheet 10s steps(4) infinite;
+        width: calc(128px * var(--pixel-size));
     }
+
+    @keyframes moveSpritesheet {
+        from {
+            transform: translate3d(opx, 0, 0);
+        }
+
+        to {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    .pixelart {
+        image-rendering: pixelated;
+    }
+
+    .feedButton{
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    margin-bottom: 25px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .feedButton:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+    
+    .feedButton:hover:after {
+        transform: translate(0, 0);
+    }
+
+    .feedButton:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
+
+    .playButton{
+    
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    margin-bottom: 25px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .playButton:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+    
+    .playButton:hover:after {
+
+        transform: translate(0, 0);    
+    }
+
+    .playButton:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
+
+    .playButton:hover {
+        outline: 0;
+    }
+
+    .brushButton{
+        align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+    .brushButton:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+    
+    .brushButton:hover:after {
+
+        transform: translate(0, 0);    
+    }
+
+    .brushButton:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
+
+    .brushButton:hover {
+        outline: 0;
+    }
+
+#resetBtn {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-.pixelart {
-    image-rendering: pixelated;
-}
+#resetBtn:after {
 
-
-
-.hunger-bar {
+    background-color: #111;
+    border-radius: 8px;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
     width: 100%;
-    height: 20px;
-    background-color: blueviolet;
-    margin-top: 10px;
+    position: absolute;
+    top: -2px;
+    transform: translate(8px, 8px);
+    transition: transform .2s ease-out;
+    z-index: -1;
+    }
+
+#resetBtn:hover:after {
+    transform: translate(0, 0);
 }
 
-.hunger.fill {
-    height: 100%;
-    width: 100%;
-    background-color: antiquewhite;
-    transition: width 0.2s ease-in-out;
+#resetBtn:active {
+    background-color: #fee6e3;
+    outline: 0;
 }
 
-.happiness-bar {
-    width: 100%;
-    height: 20px;
-    background-color: rgb(224, 239, 11);
-    margin-top: 10px;
-}
-
-.happy.fill {
-    height: 100%;
-    width: 100%;
-    background-color: antiquewhite;
-    transition: width 0.2s ease-in-out;
-}
-
-.cleanliness-bar {
-    width: 100%;
-    height: 20px;
-    background-color: rgb(80, 59, 28);
-    margin-top: 10px;
-}
-
-.clean.fill {
-    height: 100%;
-    width: 100%;
-    background-color: antiquewhite;
-    transition: width 0.2s ease-in-out;
+#resetBtn:hover {
+    outline: 0;
 }
