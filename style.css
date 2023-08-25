@@ -6,6 +6,10 @@
         font-size: 50px;
     }
 
+body {
+    background-color: #feede3;
+    margin: 0}
+
 .heading {
     display: table;
     margin-left: 0;
@@ -13,20 +17,29 @@
 
 }
 
-    :root {
+:root {
         --pixel-size: 6;
-    }
+}
 
-    #petStateUpdate {
+.petStateUpdateDiv {
 
-        margin-left: 45%;
-    }
+    margin-left: 30%;
+    display: block;
+}
 
-    .pet {
+#petStateUpdate {
+    display: block;
+    margin-left: 45%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 45px;
+}
+
+.pet {
         width: calc(32px * var(--pixel-size));
         height: calc(32px * var(--pixel-size));
         overflow: hidden;
-        background-color: none;
+        /* background-color: none; */
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -35,12 +48,12 @@
         background-image: url("./Backgrounds/hill.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
-    }
+}
 
 .buttons {
 
     display: flex;
-    margin-left:38%;
+    margin-left:35%;
 
 }
 
@@ -155,7 +168,7 @@
     line-height: 24px;
     max-width: 100%;
     margin-bottom: 25px;
-    margin-left: 5%
+    margin-right: 5%;
     padding: 0 25px;
     position: relative;
     text-align: center;
@@ -206,6 +219,7 @@
     line-height: 24px;
     max-width: 100%;
     margin-bottom: 25px;
+    margin-right: 5%;
     padding: 0 25px;
     position: relative;
     text-align: center;
@@ -288,6 +302,13 @@
         transform: translate(0, 0);    
     }
 
+    #petStateUpdate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 300px;
+    }
+
     .brushButton:active {
         background-color: #ffdeda;
         outline: 0;
@@ -296,6 +317,43 @@
     .brushButton:hover {
         outline: 0;
     }
+
+.healthBars {
+
+    display: flex;
+    margin-left: 25%;
+    margin-right: 5%;
+}
+
+.r1 {
+    justify-content: center;
+    margin-right: 5%;
+}
+
+.r2 {
+
+}
+
+#timer {
+    justify-content: center;
+    margin-left: 40%;
+}
+
+.petHealthContent {
+    font-size: 30px;
+}
+
+.petHappinessContent {
+    font-size: 30px;
+}
+
+.petEnergyContent {
+    font-size: 30px;
+}
+
+.petCleanlinessContent {
+    font-size: 30px;
+}
 
 #resetBtn {
     align-items: center;

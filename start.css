@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Edu+SA+Beginner:wght@600&family=Permanent+Marker&display=swap');
 
 * {
+    background-color: #feede3;
     font-family: 'VT323', monospace;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .heading {
@@ -25,6 +26,10 @@
                  text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
                               0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
                }
+}
+
+.r1 {
+    margin-right: 5%;
 }
 
 .by {
@@ -51,12 +56,12 @@
 
 #pet-selector {
 
-    margin-left: 30%;
+    margin-left: 960px;
 }
 
 #pet-name {
 
-    margin-left: 30%;
+    margin-left: 820px;
 }
 
 #start-button    {

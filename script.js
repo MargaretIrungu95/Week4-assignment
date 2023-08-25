@@ -51,10 +51,12 @@ if (currentTimeInSeconds <= 0) {
     clearInterval(timerInterval);
 }
 
+// Level System
+
 
 // start page
 function goToStartPage() {
-    window.location.href = "http://127.0.0.1:5500/start.html";
+    window.location.href = "./start.html";
 }
 // Make bars start to decrease as soon as game is started and can be controlled by pressing the buttons.
 let barsDecrease;
@@ -124,18 +126,6 @@ else {
     document.getElementById('Pet').classList.add('cat');
     document.querySelector('.pet').style.paddingRight = '60px';
 };
-
-// // function to udate UI and check if pet needs feeding 
-// function startHungerUpdate() {
-//     hungerUpdateTimer = setInterval(() => {
-//         updateUI();
-//         if (hunger <= 30) {
-//             alert('${petName} is hungery. Please feed them!');
-//         }
-//     }, 1000);
-// }
-
-// Reset button
 
 
 resetBtn.addEventListener('click', () => {

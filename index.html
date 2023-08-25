@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div>
+    <div class="petStateUpdateDiv">
         <h3 id="petStateUpdate"> HAVE FUN!</h3>
     </div>
 
@@ -36,17 +36,21 @@
     </div>
 
     <div class="healthBars">
-        <p>Pet Health:</p>
+        <div class="r1">
+        <p class="petHealthContent">Pet Health:</p>
         <progress id="health" value="100" max="100"></progress>
         <br>
-        <p>Pet Happiness:</p>
+        <p class="petHappinessContent">Pet Happiness:</p>
         <progress id="happiness" value="100" max="100"></progress>
         <br>
-        <p>Pet Energy:</p>
+        </div>
+        <div class="r2">
+        <p class="petEnergyContent">Pet Energy:</p>
         <progress id="energy" value="100" max="100"></progress>
         <br>
-        <p>Pet Cleanliness:</p>
+        <p class="petCleanlinessContent">Pet Cleanliness:</p>
         <progress id="cleanliness" value="100" max="100"></progress>
+        </div>
     </div>
 
     <br>
