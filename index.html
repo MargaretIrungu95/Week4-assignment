@@ -2,64 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>CYBER PET</title>
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="start.css">
 </head>
 <body>
 
-    <div class="petStateUpdateDiv">
-        <h3 id="petStateUpdate"> HAVE FUN!</h3>
-    </div>
-
-    <div id="timer"></div>
-
-    <div class='container'>
-        <div class = 'cat'>
-            <img src="" alt="">
-        </div>
-    </div>
-
-    <div class="pet">
-    <img id="Pet"   class= "pixelart"  src="./Doggos/Doggo1.png" alt="Doggo">
-    </div>
-
-    <div class ="startBtnDiv">
-        <button onclick="move()" id="startBtn">CLICK TO START</button>
-    </div>
+    <div >
+        <h1 class="heading">WELCOME TO YOUR CYBER_PET!</h1>
+        <h2 class="by">By Meg, Margaret & Jett</h2>
+        <p class="choose">Choose your Pet</p>
+    <select id="pet-selector">
+        <option value="cat">Cat</option>
+        <option value="Dog">Dog</option>
+    </select>
     <br>
-    <div class="buttons">
-        <button class="feedButton" id="feedBtn">FEED</button>
-        <button class="playButton" id="playBtn">PLAY</button>
-        <button class="brushButton" id="brushBtn">BRUSH</button>
+    <p class="give">Give your pet a name</p>
+    <input type="text" id="pet-name" placeholder="Enter a name">
+    <br><br>
+    <div id="gameRules">
+        <p class="rules">To keep your pet alive, please ensure you keep the progress bars filled.</p>
+        <p class="rules">If your pet's health bar gets completely empty, your pet needs to see a vet and the game is over. Press RESET to play again!</p>
     </div>
+    <button id="start-button">Start</button>
+    
+    <script src="./start.js"></script>
 
-    <div class="healthBars">
-        <div class="r1">
-        <p class="petHealthContent">Pet Health:</p>
-        <progress id="health" value="100" max="100"></progress>
-        <br>
-        <p class="petHappinessContent">Pet Happiness:</p>
-        <progress id="happiness" value="100" max="100"></progress>
-        <br>
-        </div>
-        <div class="r2">
-        <p class="petEnergyContent">Pet Energy:</p>
-        <progress id="energy" value="100" max="100"></progress>
-        <br>
-        <p class="petCleanlinessContent">Pet Cleanliness:</p>
-        <progress id="cleanliness" value="100" max="100"></progress>
-        </div>
-    </div>
-
-    <br>
-
-    <div class="resetBtnDiv">
-        <button id="resetBtn">RESET GAME</button>
-    </div>
-
-
-    <script src="./script.js"></script>
 </body>
 </html>

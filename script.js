@@ -56,7 +56,7 @@ if (currentTimeInSeconds <= 0) {
 
 // start page
 function goToStartPage() {
-    window.location.href = "./start.html";
+    window.location.href = "./index.html";
 }
 // Make bars start to decrease as soon as game is started and can be controlled by pressing the buttons.
 let barsDecrease;
