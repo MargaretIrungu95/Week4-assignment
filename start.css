@@ -1,4 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Edu+SA+Beginner:wght@600&family=Permanent+Marker&display=swap');
+
 * {
     font-family: 'VT323', monospace;
     font-size: 50px;
+}
+
+.heading {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-family: 'Edu SA Beginner', cursive;
+    font-family: 'Permanent Marker', cursive;
+    color: #ffffff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    }
+    @-webkit-keyframes glow {
+            from {
+            text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 
+                         0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+                }
+            to {
+                 text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6,
+                              0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+               }
+}
+
+.by {
+    font-size: 30px;
+    text-align: center;
+}
+
+.choose {
+    font-size: 30px;
+    text-align: center;
+}
+
+.give {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.rules {
+
+    font-size: 30px;
+    text-align: center;
+}
+
+#pet-selector {
+
+    margin-left: 30%;
+}
+
+#pet-name {
+
+    margin-left: 30%;
+}
+
+#start-button    {
+    align-items: center;
+    background-color: #fee6e3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    margin-left: 45%;
+    margin-bottom: 25px;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+
+#start-button:after {
+background-color: #111;
+border-radius: 8px;
+content: "";
+display: block;
+height: 48px;
+left: 0;
+width: 100%;
+position: absolute;
+top: -2px;
+transform: translate(8px, 8px);
+transition: transform .2s ease-out;
+z-index: -1;
+}
+
+#start-button:hover:after {
+transform: translate(0, 0);
+}
+
+#start-button:active {
+background-color: #ffdeda;
+outline: 0;
+}
+
+#start-button:hover {
+
+outline: 0;
 }

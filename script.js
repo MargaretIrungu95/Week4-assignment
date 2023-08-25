@@ -15,6 +15,43 @@ const petSelect = new URLSearchParams(window.location.search);
 const petName = petSelect.get('name');
 const petType = petSelect.get('pet');
 
+// Timer id
+const timerDisplay = document.getElementById('timer');
+
+// timer functions 
+const initialTimeInSeconds = 360;
+let currentTimeInSeconds = initialTimeInSeconds;
+
+// update timer display
+function updateTimerDisplay() {
+    timerDisplay.innerText = `Time: ${currentTimeInSeconds} seconds`;
+}
+
+// Start timer
+function startTimer() {
+    updateTimerDisplay();
+    timerInterval = setInterval(() => {
+        currentTimeInSeconds--;
+
+        if (currentTimeInSeconds <= 0) {
+            clearInterval(timerInterval);
+        }
+
+        updateTimerDisplay();
+    }, 1000);
+}
+
+// Start when game begins 
+startBtn.addEventListener('click', () => {
+    startTimer();
+});
+
+// timer expiration
+if (currentTimeInSeconds <= 0) {
+    clearInterval(timerInterval);
+}
+
+
 // start page
 function goToStartPage() {
     window.location.href = "http://127.0.0.1:5500/start.html";
